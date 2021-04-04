@@ -16,6 +16,20 @@ Currently only mining on eth.2miners.com is supported.
  - Next payout value
  - Wallet value
 
+## Example output
+
+```
+WalletId: [0x1234567890ABCDEF1234566789ABCDED1234345]                                                                  
+Currency: [USD]                                                                                                       
+UnPaidValue: [15,5798809541]                                                                                            
+Last24hGain: [10,1668809541]                                                                                            
+PerHourGain: [0,8588350539]                                                                                             
+TotalPaidOut: [43,8588350539]                                                                                                     
+NextPayoutDateTime: [17.04.2021 20:35:29]                                                                               
+NextPayoutValue: [130,865]                                                                                              
+WalletValue: [500,324]  
+```
+
 ## Used APIs
  - CoinGecko API
  - EtherScan API

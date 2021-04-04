@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace _2MinersStats.EtherScan
+namespace CryptoMiningCalculator.EtherScan
 {
     public class WalletDto
     {

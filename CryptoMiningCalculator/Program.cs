@@ -1,13 +1,13 @@
-﻿using _2MinersStats._2minersApi;
-using _2MinersStats.CoinGeckoApi;
-using _2MinersStats.EtherScan;
+﻿using CryptoMiningCalculator.CoinGeckoApi;
+using CryptoMiningCalculator.EtherScan;
+using CryptoMiningCalculator.MinersApi;
 using System;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace _2MinersStats
+namespace CryptoMiningCalculator
 {
     internal class Program
     {
@@ -16,7 +16,8 @@ namespace _2MinersStats
 
         private static async Task Main(string[] args)
         {
-            Console.WriteLine("Application created by Qtyb. Feel free to share :)\nGithub: https://github.com/Qtyb/CryptoMiningCalculator\n");
+            Console.WriteLine();
+            Console.WriteLine("Application created by Qtyb. Feel free to share and contribute :)\nGithub: https://github.com/Qtyb/CryptoMiningCalculator\n");
 
             if (args.Length < 2)
             {
@@ -35,7 +36,7 @@ namespace _2MinersStats
             //GET 2MINERS API DATA
             var response = await _client.GetAsync($"https://eth.2miners.com/api/accounts/{walletId}");
             var content = await response.Content.ReadAsStringAsync();
-            var minersResponse = JsonSerializer.Deserialize<_2MinersResponseDto>(content);
+            var minersResponse = JsonSerializer.Deserialize<MinersResponseDto>(content);
 
             //Wallet value
             decimal? walletValue = null;

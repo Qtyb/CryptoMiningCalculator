@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace _2MinersStats._2minersApi
+namespace CryptoMiningCalculator.MinersApi
 {
-    public class _2MinersResponseDto
+    public class MinersResponseDto
     {
         [JsonPropertyName("hashrate")]
         public decimal AverageHashRate { get; set; }

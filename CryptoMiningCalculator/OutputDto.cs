@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _2MinersStats
+namespace CryptoMiningCalculator
 {
     public class OutputDto
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace _2MinersStats.CoinGeckoApi
+namespace CryptoMiningCalculator.CoinGeckoApi
 {
     public class CoinGeckoResponse
     {

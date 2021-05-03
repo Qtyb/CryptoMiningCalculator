@@ -11,8 +11,8 @@ namespace CryptoMiningCalculator.MinersApi
         [JsonPropertyName("24hreward")]
         public decimal Last24hReward { get; set; }
 
-        [JsonPropertyName("paymentsTotal")]
-        public decimal TotalPaid { get; set; }
+        [JsonPropertyName("payments")]
+        public IEnumerable<PaymentDto> Payments { get; set; }
 
         [JsonPropertyName("stats")]
         public StatDto Stats { get; set; }
@@ -37,5 +37,11 @@ namespace CryptoMiningCalculator.MinersApi
 
         [JsonPropertyName("reward")]
         public int Reward { get; set; }
+    }
+
+    public class PaymentDto
+    {
+        [JsonPropertyName("amount")]
+        public decimal Amount { get; set; }
     }
 }

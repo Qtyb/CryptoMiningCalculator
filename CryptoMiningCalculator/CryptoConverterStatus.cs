@@ -33,7 +33,7 @@ namespace CryptoMiningCalculator
         public decimal? WalletValue { get; }
         public decimal UnpaidValue => (MinersResponse.Stats.Balance + MinersResponse.Stats.Immature) / _ethValueDivider;
         public decimal Last24h => MinersResponse.Last24hReward / _ethValueDivider;
-        public decimal TotalPaidOut => MinersResponse.Payments.Sum(p => p.Amount) / _ethValueDivider;
+        public decimal TotalPaidOut => (MinersResponse.Payments?.Sum(p => p.Amount) ?? 0) / _ethValueDivider;
         public decimal NextPayoutValue => 0.05M;
 
         public decimal GetLastHour()
